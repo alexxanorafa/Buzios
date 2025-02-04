@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Búzios Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="https://alexxanorafa.github.io/Tempo_e_Sonhos/" class="menu-item">Tempo e Sonhos</a>
+        <a href="https://alexxanorafa.github.io/posicionamentodosastros/" class="menu-item">Mapa Astral</a>
+        <a href="https://alexxanorafa.github.io/Aneis_da_Sabedoria/" class="menu-item">Anéis da Sabedoria</a>
+        <a href="https://alexxanorafa.github.io/TarodeMarselha/" class="menu-item">Tarô de Marselha</a>
+        <a href="https://alexxanorafa.github.io/Runas-do-Destino/" class="menu-item">Runas do Destino</a>
+        <a href="https://alexxanorafa.github.io/O-Construtor-do-Destino/" class="menu-item">O Construtor do Destino</a>
+        <a href="https://alexxanorafa.github.io/Tabuleiro-Quantico/" class="menu-item">Tabuleiro Quantico</a>
+        <a href="https://alexxanorafa.github.io/Oraculo-das-Pedras/" class="menu-item">Oráculo das Pedras</a>
+        <a href="https://alexxanorafa.github.io/I-Ching-Virtual/" class="menu-item">I Ching Virtual</a>
+        <a href="https://alexxanorafa.github.io/Biblioteca-Onirica/" class="menu-item">Biblioteca Onirica</a>
+        <a href="https://alexxanorafa.github.io/Kabbalah-Interativa/" class="menu-item">Kabbalah Interativa</a>
+        <a href="https://alexxanorafa.github.io/Almas-Conectadas/" class="menu-item">Almas Conectadas</a>
+        <a href="https://alexxanorafa.github.io/Pendulo-Divinatorio/" class="menu-item">Pendulo Divinatorio</a>
+      </nav>
+      <div class="container">
+        <div id="start-screen">
+            <h1>🔮 Jogo de Búzios</h1>
+            
+            <div class="house-selector">
+                <button class="house-btn active" data-house="ketu">Casa de Ketu</button>
+                <button class="house-btn" data-house="jeje">Casa Jeje</button>
+                <button class="house-btn" data-house="nago">Casa Nagô</button>
+            </div>
+
+            <div class="question-area">
+                <textarea id="user-question" placeholder="Faça sua pergunta aos Orixás..." rows="3"></textarea>
+                <div class="offerings-grid">
+                    <div class="offering-item" data-item="flor">🌺</div>
+                    <div class="offering-item" data-item="comida">🍲</div>
+                    <div class="offering-item" data-item="vela">🕯️</div>
+                </div>
+            </div>
+            <button class="cast-btn" onclick="prepareCasting()">Lançar Búzios</button>
+        </div>
+
+        <div id="casting-screen" class="hidden">
+            <div class="casting-circle">
+                <div class="cowrie-shell"></div>
+                <div class="cowrie-shell"></div>
+                <div class="cowrie-shell"></div>
+                <div class="cowrie-shell"></div>
+            </div>
+            <div class="energy-counter">
+                <div class="energy-bar"></div>
+                <span class="energy-text">Axé: 100%</span>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <div class="odu-header">
+                <h2 id="odu-name"></h2>
+                <div class="odu-symbol" id="odu-symbol"></div>
+            </div>
+            
+            <div class="result-grid">
+                <div class="interpretation-card">
+                    <h3>📜 Mensagem</h3>
+                    <p id="message"></p>
+                </div>
+                <div class="interpretation-card">
+                    <h3>⚖️ Conselho</h3>
+                    <p id="advice"></p>
+                </div>
+                <div class="interpretation-card">
+                    <h3>🌿 Ebó Sugerido</h3>
+                    <p id="ebo"></p>
+                </div>
+            </div>
+            <button class="reset-btn" onclick="resetReading()">Nova Consulta</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
